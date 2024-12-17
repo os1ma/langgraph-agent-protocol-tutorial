@@ -4,7 +4,10 @@ version = "0.1.0"
 description = ""
 readme = "README.md"
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+    "autogen>=0.5.3",
+    "langgraph>=0.2.59",
+]
 
 [tool.mypy]
 strict = true
@@ -12,3 +15,8 @@ strict = true
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = ["D", "ANN", "TRY", "EM", "FA", "SIM108", "S101", "RET505", "TCH002"]
+
+[dependency-groups]
+dev = [
+    "langgraph-cli>=0.1.64",
+]
